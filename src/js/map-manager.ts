@@ -41,6 +41,7 @@ export class MapManager {
   constructor(domId: string) {
     //  图片的默认大小在使用gdal2tiles就可以设置，这里设置的只是leaflet的默认大小
     // 也可以通过点击左上角和右下角的来查看图片的实际大小
+    // 原点在左上角 x往右边递增 y往下边递减
     const bounds = L.latLngBounds(L.latLng(0, 0), L.latLng(-256, 256))
     this.map = L.map(domId, {
       center: [-102, 148], // 初始中心点
